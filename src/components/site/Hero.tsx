@@ -54,7 +54,7 @@ export function Hero({ image }: { image?: string }) {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[50%_62%]"
         />
       </motion.div>
 
