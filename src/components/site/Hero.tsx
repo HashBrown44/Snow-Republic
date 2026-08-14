@@ -124,26 +124,6 @@ export function Hero({ image }: { image?: string }) {
           beer, wood-fired pizza, wine, cocktails and — mostly — positive vibrations.
           No reservations. Kiddos and doggos welcome.
         </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.85, duration: 0.7 }}
-          className="mt-9 flex flex-wrap items-center gap-4"
-        >
-          <a
-            href="#beer"
-            className="rounded-full bg-ice-500 px-7 py-3.5 text-base font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 hover:bg-ice-400"
-          >
-            See What&rsquo;s on Tap
-          </a>
-          <a
-            href="#visit"
-            className="rounded-full border border-bone/40 bg-steel-950/20 px-7 py-3.5 text-base font-semibold text-bone backdrop-blur-sm transition-colors duration-200 hover:border-bone/70 hover:bg-steel-950/40"
-          >
-            Find the Taproom
-          </a>
-        </motion.div>
       </motion.div>
 
       {/* scroll cue */}

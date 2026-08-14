@@ -7,6 +7,7 @@ import {
   fallbackProducts,
   fallbackSettings,
   fallbackGallery,
+  fallbackSpecials,
 } from "./fallback";
 import { modifierGroups, type ModGroup } from "./menuExtras";
 import type {
@@ -17,6 +18,7 @@ import type {
   Product,
   SiteSettings,
   GalleryShot,
+  Special,
 } from "./types";
 
 /**
@@ -108,4 +110,12 @@ export const getGallery = () =>
       "src": image.asset->url, "alt": alt
     }`,
     fallbackGallery,
+  );
+
+export const getSpecials = () =>
+  fetchOrFallback<Special[]>(
+    `*[_type == "special" && active == true] | order(order asc){
+      "_id": _id, title, description, price, schedule
+    }`,
+    fallbackSpecials,
   );

@@ -19,7 +19,7 @@ export function Story({ image }: { image?: string }) {
           <Reveal>
             <p className="eyebrow flex items-center gap-3 text-ice-600">
               <span className="h-px w-8 bg-ice-600" />
-              Our Story
+              About Us
             </p>
           </Reveal>
           <Reveal delay={0.05}>

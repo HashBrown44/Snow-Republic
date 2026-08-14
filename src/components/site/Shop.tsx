@@ -47,7 +47,7 @@ function ProductCard({ product }: { product: Product }) {
   const reduce = useReducedMotion();
   return (
     <motion.a
-      href="#visit"
+      href="/visit"
       variants={{
         hidden: { opacity: 0, y: reduce ? 0 : 24 },
         show: {

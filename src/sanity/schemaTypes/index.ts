@@ -178,6 +178,38 @@ export const menuModifiers = defineType({
   preview: { prepare: () => ({ title: "Menu Add-ons & Sauces" }) },
 });
 
+export const special = defineType({
+  name: "special",
+  title: "Special / Deal",
+  type: "document",
+  fields: [
+    defineField({ name: "title", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "description", type: "text", rows: 2 }),
+    defineField({ name: "price", title: "Price ($, optional)", type: "number" }),
+    defineField({
+      name: "schedule",
+      title: "When (e.g. Every Monday, All season)",
+      type: "string",
+    }),
+    defineField({
+      name: "order",
+      title: "Order",
+      type: "number",
+      description: "Lower numbers show first.",
+    }),
+    defineField({
+      name: "active",
+      title: "Show on the site",
+      type: "boolean",
+      initialValue: true,
+    }),
+  ],
+  orderings: [
+    { name: "order", title: "Order", by: [{ field: "order", direction: "asc" }] },
+  ],
+  preview: { select: { title: "title", subtitle: "schedule" } },
+});
+
 export const galleryImage = defineType({
   name: "galleryImage",
   title: "Gallery Photo",
@@ -243,6 +275,7 @@ export const schemaTypes = [
   extra,
   modGroup,
   menuModifiers,
+  special,
   galleryImage,
   siteSettings,
 ];

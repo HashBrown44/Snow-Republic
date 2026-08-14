@@ -6,6 +6,7 @@ import type {
   Product,
   SiteSettings,
   GalleryShot,
+  Special,
 } from "./types";
 
 /**
@@ -496,6 +497,32 @@ export const fallbackSettings: SiteSettings = {
   heroImage: "/images/storefront.jpg",
   storyImage: "/images/place-exterior-pub.jpg",
 };
+
+export const fallbackSpecials: Special[] = [
+  {
+    _id: "s1",
+    title: "$5 Wing Mondays",
+    description:
+      "Five-dollar orders of our double-fried wings, every Monday. Pick your flavor — Maple Buffalo, Habanero Honey, Jamaican Jerk & more.",
+    price: 5,
+    schedule: "Every Monday",
+  },
+  {
+    _id: "s2",
+    title: "$2 Dog Wednesdays",
+    description:
+      "Two-dollar Cheezee Bacon Dogs all day Wednesday. Beer cheese and bacon on a toasted brioche roll.",
+    price: 2,
+    schedule: "Every Wednesday",
+  },
+  {
+    _id: "s3",
+    title: "Friday Slice Combos",
+    description:
+      "A wood-fired slice and a pour to close out the week. Ask the bar for this week's combo.",
+    schedule: "Every Friday",
+  },
+];
 
 export const fallbackGallery: GalleryShot[] = [
   {

@@ -18,7 +18,7 @@ export function Drinks({ drinks }: { drinks: Drink[] }) {
             <Reveal>
               <p className="eyebrow flex items-center gap-3 text-ice-600">
                 <span className="h-px w-8 bg-ice-600" />
-                Not Just Beer
+                Other Alcoholic Options
               </p>
             </Reveal>
             <Reveal delay={0.05}>

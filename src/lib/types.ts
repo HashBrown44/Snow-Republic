@@ -70,3 +70,11 @@ export type GalleryShot = {
   src: string;
   alt: string;
 };
+
+export type Special = {
+  _id: string;
+  title: string;
+  description: string;
+  price?: number;
+  schedule?: string; // e.g. "Every Monday", "All season"
+};

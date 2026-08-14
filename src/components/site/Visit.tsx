@@ -119,8 +119,8 @@ export function Visit({ settings }: { settings: SiteSettings }) {
                 </a>
                 <p className="mt-1 text-bone/50">No reservations · first come, first served</p>
               </InfoCard>
-              <InfoCard icon={Bus} title="Getting Here">
-                <p>{settings.secondLocation}</p>
+              <InfoCard icon={Bus} title="Sober Ride Options">
+                <p>Had a few? Get home safe — hop the shuttle or the free MOOver.</p>
                 <a
                   href="https://www.highcountrymarine.com/shuttle-bus-service"
                   target="_blank"
@@ -129,6 +129,15 @@ export function Visit({ settings }: { settings: SiteSettings }) {
                 >
                   <Bus className="h-3.5 w-3.5" />
                   Last Call Shuttle Service
+                </a>
+                <a
+                  href="https://www.moover.com/route/mount-snow-base-area/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1.5 inline-flex items-center gap-1.5 font-semibold text-ice-300 hover:text-ice-200"
+                >
+                  <Bus className="h-3.5 w-3.5" />
+                  MOOver Schedule (Mount Snow)
                 </a>
               </InfoCard>
 

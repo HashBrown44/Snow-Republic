@@ -1,16 +1,19 @@
+import Link from "next/link";
 import type { SiteSettings } from "@/lib/types";
 import { PineRow } from "../art/Art";
 import { Snow } from "./Snow";
 import { Logo } from "./Logo";
 
 const nav = [
-  { href: "#beer", label: "Beer" },
-  { href: "#kitchen", label: "Food" },
-  { href: "#drinks", label: "Drinks" },
-  { href: "#events", label: "Events" },
-  { href: "#gallery", label: "The Vibe" },
-  { href: "#shop", label: "Take It Home" },
-  { href: "#visit", label: "Visit" },
+  { href: "/menu", label: "Menu" },
+  { href: "/pizza", label: "Pizza" },
+  { href: "/beer", label: "Beer" },
+  { href: "/drinks", label: "Other Alcoholic Options" },
+  { href: "/vibe", label: "The Vibe" },
+  { href: "/events", label: "Events" },
+  { href: "/merch", label: "Merch" },
+  { href: "/about", label: "About Us" },
+  { href: "/visit", label: "Visit" },
 ];
 
 export function Footer({ settings }: { settings: SiteSettings }) {
@@ -38,9 +41,9 @@ export function Footer({ settings }: { settings: SiteSettings }) {
             <ul className="space-y-2.5 text-sm text-bone/70">
               {nav.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="transition-colors hover:text-bone">
+                  <Link href={l.href} className="transition-colors hover:text-bone">
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
