@@ -5,9 +5,7 @@ import { Snow } from "./Snow";
 import { Logo } from "./Logo";
 
 const nav = [
-  { href: "/menu", label: "Menu" },
-  { href: "/pizza", label: "Pizza" },
-  { href: "/beer", label: "Beer" },
+  { href: "/online-ordering", label: "Online Ordering" },
   { href: "/drinks", label: "Other Alcoholic Options" },
   { href: "/vibe", label: "The Vibe" },
   { href: "/events", label: "Events" },

@@ -38,7 +38,7 @@ export function Kitchen({
             </Reveal>
             <Reveal delay={0.05}>
               <h2 className="mt-5 max-w-xl font-display text-[clamp(2rem,5vw,3.4rem)] font-semibold leading-[1.05] tracking-[-0.01em] text-balance">
-                Wood-fired, made for beer.
+                Real food, made from scratch.
               </h2>
             </Reveal>
           </div>

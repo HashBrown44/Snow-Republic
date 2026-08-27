@@ -15,15 +15,15 @@ type Tile = {
 /** Bento tiles that double as the landing page's navigation into each section. */
 const tiles: Tile[] = [
   {
-    href: "/menu",
-    label: "The Menu",
-    blurb: "Wood-fired kitchen, apps, handhelds & specials",
+    href: "/online-ordering",
+    label: "Online Ordering",
+    blurb: "Order ahead — specials, kitchen, pizza & tap list",
     image: "/images/food-burger.jpg",
     className: "sm:col-span-2 sm:row-span-2",
     sizes: "(max-width: 640px) 100vw, 50vw",
   },
   {
-    href: "/pizza",
+    href: "/online-ordering#pizza",
     label: "Pizza",
     blurb: "Hand-stretched, straight from the oven",
     image: "/images/food-garlic-bread.jpg",
@@ -31,7 +31,7 @@ const tiles: Tile[] = [
     sizes: "(max-width: 640px) 100vw, 50vw",
   },
   {
-    href: "/beer",
+    href: "/online-ordering#beer",
     label: "On Tap",
     blurb: "A rotating board, brewed on site",
     image: "/images/beer-taps.jpg",

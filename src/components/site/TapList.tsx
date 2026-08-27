@@ -117,7 +117,7 @@ export function TapList({ beers }: { beers: Beer[] }) {
           </div>
           <p className="max-w-sm text-charcoal/70">
             The lineup shifts with the seasons and whatever we felt like brewing.
-            Here&rsquo;s what&rsquo;s pouring this week.
+            Here&rsquo;s an example of a rotation week.
           </p>
         </div>
 

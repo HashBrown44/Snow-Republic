@@ -35,7 +35,18 @@ export function Hero({ image }: { image?: string }) {
       transition: { delay: 0.15 + i * 0.07, duration: 0.7, ease: EASE_OUT },
     }),
   };
-  const headline = ["Come", "for", "the", "beer.", "Stay", "for", "the", "vibe."];
+  const headline = [
+    "Come",
+    "for",
+    "the",
+    "food",
+    "and",
+    "beer.",
+    "Stay",
+    "for",
+    "the",
+    "vibe.",
+  ];
 
   return (
     <section

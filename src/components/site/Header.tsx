@@ -8,9 +8,7 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 const links = [
-  { href: "/menu", label: "Menu" },
-  { href: "/pizza", label: "Pizza" },
-  { href: "/beer", label: "Beer" },
+  { href: "/online-ordering", label: "Online Ordering" },
   { href: "/drinks", label: "Other Drinks" },
   { href: "/vibe", label: "The Vibe" },
   { href: "/events", label: "Events" },
