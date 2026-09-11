@@ -53,6 +53,8 @@ export function Gallery({ shots }: { shots: GalleryShot[] }) {
                     src={s.src}
                     alt={s.alt}
                     fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : "auto"}
                     sizes={l.sizes}
                     className="object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.06]"
                   />

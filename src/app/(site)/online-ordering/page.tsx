@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema, productListSchema } from "@/lib/jsonld";
 import { ExternalLink } from "lucide-react";
 import { Specials } from "@/components/site/Specials";
 import { Kitchen } from "@/components/site/Kitchen";
@@ -15,11 +17,12 @@ import {
 const ORDER_URL =
   "https://order.toasttab.com/online/snow-republic-brewery-33-vermont-route-100";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Online Ordering",
   description:
     "Order online from Snow Republic Brewery in West Dover, Vermont — this week's specials, the wood-fired kitchen, pizza and what's on tap.",
-};
+  path: "/online-ordering",
+});
 
 export default async function OnlineOrderingPage() {
   const [
@@ -42,6 +45,15 @@ export default async function OnlineOrderingPage() {
 
   return (
     <>
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Online Ordering", path: "/online-ordering" },
+          ]),
+          ...productListSchema(frozen),
+        ]}
+      />
       {/* Order Online intro band */}
       <section className="grain relative overflow-hidden bg-steel-950 px-5 pb-16 pt-32 text-bone sm:px-8 sm:pb-20 sm:pt-36">
         <div

@@ -7,8 +7,10 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
-  // Allow next/image to optimize photos served from Sanity's CDN.
+  // next/image optimization: serve modern formats (AVIF, then WebP fallback)
+  // and allow photos served from Sanity's CDN to be optimized.
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
   },
 };

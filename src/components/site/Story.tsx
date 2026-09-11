@@ -54,6 +54,8 @@ export function Story({ image }: { image?: string }) {
                 src={image || "/images/place-exterior-pub.jpg"}
                 alt="The Snow Republic brew pub, a log cabin on Route 100 in West Dover"
                 fill
+                priority
+                fetchPriority="high"
                 sizes="(max-width: 1024px) 100vw, 520px"
                 className="object-cover"
               />

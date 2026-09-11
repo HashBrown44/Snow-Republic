@@ -27,12 +27,14 @@ export function Hero({ image }: { image?: string }) {
   const yText = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.85], [1, reduce ? 1 : 0]);
 
+  // Above-the-fold hero text keeps opacity:1 so it's painted in the SSR HTML
+  // (good LCP); only the transform animates in, so nothing waits on hydration.
   const word = {
-    hidden: { opacity: 0, y: reduce ? 0 : 24 },
+    hidden: { opacity: 1, y: reduce ? 0 : 22 },
     show: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: 0.15 + i * 0.07, duration: 0.7, ease: EASE_OUT },
+      transition: { delay: 0.04 + i * 0.03, duration: 0.5, ease: EASE_OUT },
     }),
   };
   const headline = [
@@ -64,6 +66,7 @@ export function Hero({ image }: { image?: string }) {
           alt="Snow Republic Brewery's log-cabin taproom on Route 100 in West Dover, Vermont"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-[50%_62%]"
         />
@@ -126,9 +129,11 @@ export function Hero({ image }: { image?: string }) {
         </h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          // This paragraph is the hero's LCP element — keep its entrance
+          // near-immediate so Largest Contentful Paint isn't gated by a delay.
+          initial={{ opacity: 1, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.7 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
           className="mt-7 max-w-xl text-lg leading-relaxed text-bone/85 text-pretty"
         >
           A veteran-owned brewery and full kitchen at the foot of Mount Snow. Craft
