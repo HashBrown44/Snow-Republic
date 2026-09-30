@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE_URL, SITE_NAME, IS_INDEXABLE, OG_IMAGE } from "@/lib/seo";
 import "./globals.css";
 
@@ -82,7 +83,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
       </head>
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
